@@ -53,15 +53,28 @@ int main(){
 }
 
 */
+// class Student
+// {
+//     double marks;// It give (8+8+1+1+(6))==24;
+//     double id;
+//     char a;
+//     bool b;
+//     //or Align the sum of datatype in the boundary of largest datatype
+//     // Basically it takes the nearest multiple if larger size datatype.
+// };
+// int main(){
+//     cout<<sizeof(Student)<<endl;
+// }
+
 class Student
 {
-    double marks;// It give (8+8+1+1+(6))==24;
-    double id;
-    char a;
-    bool b;
-    //or Align the sum of datatype in the boundary of largest datatype
-    // Basically it takes the nearest multiple if larger size datatype.
+    string name; // 24
+    int a;       // It give (24+4+4+4+1)=37  37<48
+    int b;       // therefor padding=11;
+    int c;
+    bool value;
 };
-int main(){
-    cout<<sizeof(Student)<<endl;
+int main()
+{
+    cout << sizeof(Student) << endl; // 48
 }
