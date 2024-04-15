@@ -13,6 +13,7 @@ class Student {
         cout<<"Bunking"<<endl;
     }
     void sleep(){
+        
         cout<<"Sleeping"<<endl;
     }
 
