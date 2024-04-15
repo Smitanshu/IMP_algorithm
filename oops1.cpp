@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+//Empty class size is 1-byte
 class Student {
 
     int marks;
@@ -13,7 +14,7 @@ class Student {
         cout<<"Bunking"<<endl;
     }
     void sleep(){
-        
+
         cout<<"Sleeping"<<endl;
     }
 
