@@ -28,69 +28,104 @@ using namespace std;
 // if you write by custom
 // It runs only when object is created in main function.
 // It is mandatory to present
-class Constructor
+// class Constructor
+// {
+
+// public:
+//     int id;
+//     string name;
+//     int marks;
+//     bool present;
+//     // It created Ctor by programmer now he dont add deaultly.
+//     // If deault constructor is created in private then you cant use that box of class to any object.
+//     // Default constructor assign garbage
+//     Constructor()
+//     {
+//         cout << "Default ctor called" << endl;
+//     }
+
+//     // parameterized constructor:
+//     Constructor(int _id, string _name, int _marks, bool _present)
+//     {
+//         id = _id;
+//         name = _name;
+//         marks = _marks;
+//         present = _present;
+//         cout << "Parameterized ctor called" << endl;
+//     }
+
+//     Constructor(int _id, string _name, int _marks)
+//     {
+//         id = _id;
+//         name = _name;
+//         marks = _marks;
+
+//         cout << "Parameterized ctor without present called" << endl;
+//     }
+//     void study()
+//     {
+//         cout << "Study";
+//     }
+//     void mark()
+//     {
+//         cout << "Marking";
+//     }
+//     void prsent()
+//     {
+//         cout << "Present ";
+//     }
+// };
+// int main()
+// {
+//     Constructor c1; // Default constructor called at this time
+//     // If object is not created or initialized in the main function.
+//     // Ctor not execute .
+
+//     Constructor c2(36, "Smitanshu", 72, 1); // parameterized ctor called
+//     cout << c2.id << endl;
+//     cout << c2.name << endl;
+
+//     // This calle the polymorphism concept how he knows that withoud absent parameter constructor
+//     // we have to call while the all constructor name is same->> known polymorphism.
+//     Constructor c3(37, "Himanshu", 85);
+//     cout << c3.name << endl;
+//     cout << c3.marks << endl;
+
+//     return 0;
+// }
+
+
+//using *this for creation of parameterized constructor : 
+
+class Student_this
 {
+private:
+    string gf;
+   
 
 public:
     int id;
-    string name;
     int marks;
-    bool present;
-    // It created Ctor by programmer now he dont add deaultly.
-    // If deault constructor is created in private then you cant use that box of class to any object.
-    // Default constructor assign garbage
-    Constructor()
+    string name;
+
+    Student_this()
     {
-        cout << "Default ctor called" << endl;
+        cout << "Default ctor called"<<endl;
     }
 
-    // parameterized constructor:
-    Constructor(int _id, string _name, int _marks, bool _present)
+    Student_this(int id, int marks, string  name)
     {
-        id = _id;
-        name = _name;
-        marks = _marks;
-        present = _present;
-        cout << "Parameterized ctor called" << endl;
-    }
-
-    Constructor(int _id, string _name, int _marks)
-    {
-        id = _id;
-        name = _name;
-        marks = _marks;
-        
-        cout << "Parameterized ctor without present called" << endl;
-    }
-    void study()
-    {
-        cout << "Study";
-    }
-    void mark()
-    {
-        cout << "Marking";
-    }
-    void prsent()
-    {
-        cout << "Present ";
+        this->id = id;
+        this->marks = marks;
+        this->name = name;
+        cout << "Parameterized constructor called" << endl;
     }
 };
 int main()
 {
-    Constructor c1; // Default constructor called at this time
-    // If object is not created or initialized in the main function.
-    // Ctor not execute .
+    Student_this s; //
+    Student_this s2(36, 80, "Smitanshu");
 
-    Constructor c2(36, "Smitanshu", 72, 1); // parameterized ctor called
-    cout<<c2.id<<endl;
-    cout<<c2.name<<endl;
-
-
-    //This calle the polymorphism concept how he knows that the third constructor
-    //we have to call thic konown as polymorphism.
-    Constructor c3(37, "Himanshu",85 );
-    cout<<c3.name<<endl;
-    cout<<c3.marks<<endl;
 
     return 0;
 }
