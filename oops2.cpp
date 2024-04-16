@@ -96,6 +96,7 @@ using namespace std;
 
 
 //using *this for creation of parameterized constructor : 
+//*this added by compiler privately
 
 class Student_this
 {
@@ -123,8 +124,31 @@ public:
 };
 int main()
 {
+
+    //At thi we reating object on stack 
     Student_this s; //
     Student_this s2(36, 80, "Smitanshu");
+    cout<<s2.id<<endl;
+    cout<<s2.marks<<endl;
+    cout<<s2.name<<endl;
+
+    //Lets allocatinf on heap object on heap:
+
+    Student_this *s3=new Student_this(100, 80, "Himanshu");
+    cout<<s3->name<<endl;
+    cout<<s3->id<<endl;
+    cout<<s3->marks<<endl;
+
+  cout<<"Second way of printing from heap:"<<endl;
+//Second way:
+   cout<<(*s3).name<<endl;
+    cout<<(*s3).id<<endl;
+    cout<<(*s3).marks<<endl;
+
+    delete s3;  //no memory leak
+
+
+
 
 
     return 0;
