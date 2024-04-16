@@ -27,7 +27,7 @@ using namespace std;
 //If you dont write it default present.
 //if you write by custom
 //It runs only when object is created in main function.
-
+//It is mandatory to present 
 class Constructor
 {
 
@@ -36,11 +36,15 @@ public:
     string name;
     int marks;
     bool present;
-   
+   //It created Ctor by programmer now he dont add deaultly.
+   //If deault constructor is created in private then you cant use that box of class to any objetc.
+
    Constructor(){
     cout<<"It runs deafault due to it is present in the constructor funct";
 
    }
+
+   //Default constructor assign garbage 
 
 
     void study(){
