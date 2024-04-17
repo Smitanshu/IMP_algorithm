@@ -1,7 +1,6 @@
 // Const  keyword:--->
 //compiler stores this in only read only memory:
 
-
 #include <iostream>
 using namespace std;
 int main()
