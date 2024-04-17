@@ -94,15 +94,13 @@ using namespace std;
 //     return 0;
 // }
 
-
-//using *this for creation of parameterized constructor : 
+// using *this for creation of parameterized constructor :
 //*this added by compiler privately
 
 class Student_this
 {
 private:
     string gf;
-   
 
 public:
     int id;
@@ -111,10 +109,10 @@ public:
 
     Student_this()
     {
-        cout << "Default ctor called"<<endl;
+        cout << "Default ctor called" << endl;
     }
 
-    Student_this(int id, int marks, string  name)
+    Student_this(int id, int marks, string name)
     {
         this->id = id;
         this->marks = marks;
@@ -125,31 +123,33 @@ public:
 int main()
 {
 
-    //At this allocating object on stack 
+    // At this allocating object on stack
     Student_this s; //
     Student_this s2(36, 80, "Smitanshu");
-    cout<<s2.id<<endl;
-    cout<<s2.marks<<endl;
-    cout<<s2.name<<endl;
+    cout << s2.id << endl;
+    cout << s2.marks << endl;
+    cout << s2.name << endl;
 
-    //Lets allocating  on heap:
+    // Lets allocating  on heap:
 
-    Student_this *s3=new Student_this(100, 80, "Himanshu");
-    cout<<s3->name<<endl;
-    cout<<s3->id<<endl;
-    cout<<s3->marks<<endl;
+    Student_this *s3 = new Student_this(100, 80, "Himanshu");
+    cout << s3->name << endl;
+    cout << s3->id << endl;
+    cout << s3->marks << endl;
 
-  cout<<"Second way of printing from heap:"<<endl;
-//Second way:
-   cout<<(*s3).name<<endl;
-    cout<<(*s3).id<<endl;
-    cout<<(*s3).marks<<endl;
+    cout << "Second way of printing from heap:" << endl;
+    // Second way:
+    cout << (*s3).name << endl;
+    cout << (*s3).id << endl;
+    cout << (*s3).marks << endl;
 
-    delete s3;  //no memory leak
-
-
-
-
+    delete s3; // no memory leak
 
     return 0;
 }
+
+/*The arrow operator -> in C and C++ is used for
+accessing members (variables, methods) of a structure or class through a pointer.
+
+
+*/
