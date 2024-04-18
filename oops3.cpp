@@ -4,28 +4,51 @@
 using namespace std;
 class abc
 {
-    int x;
+    mutable int x;
+    // mutable allows you to change he const value which helps in debugging.
     int *y;
+    int z;
+
 public:
     abc()
     { // constructor having function name as class name
         x = 0;
-        y = new int(199);
+        y = new int(0);
     }
+
+    //old practic of ctor:
+    // abc(int _x, int _y, int _z = 0)
+    // {
+    //     this->x = _x;
+    //     this->y = new int(_y);
+    //     this->z = _z;
+    //     // or
+
+    //     // x=_x;
+    //     // *y=_y;
+    //     // z=_z;
+    // }
+    
+    //initialization list:
+    abc(int _x, int _y, int _z = 0):x(_x), y(new int(_y)), z(_z){}
+    
     // The function in which the member variable will never change usinf CONST.
     int getX() const
     {
         // x = 50; not possible if const
+        // x=10; //this is not possible if function is const
+        // But using mutable keyword it is possible
         return x;
     }
     void setX(int _val)
     {
         x = _val;
     }
-    int getY()
+
+    int getY() const
     {
-        int f = 20;
-        y = &f;
+        // int f = 20;
+        //  y = &f; //Not possible at const
         return *y;
     }
     void setY(int _y)
@@ -33,10 +56,28 @@ public:
         // *this->y =_y;
         *y = _y;
     }
+    int getZ() const
+    {
+        return z;
+    }
+    void setZ(int _z)
+    {
+        z = _z;
+    }
 };
+void print(const abc &a) // calls only CONST functions -->(const abc&a)
+{
+    cout << a.getX() << endl;
+    cout << a.getY() << endl;
+    cout << a.getZ() << endl;
+
+    return;
+}
 
 int main()
 {
+    abc a(1, 2);
+    print(a);
 
     return 0;
 }
