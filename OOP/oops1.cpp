@@ -70,7 +70,7 @@ class Student
 {
     string name; // 24
     int a;       // It give (24+4+4+4+1)=37  37<48
-    int b;       // therefor padding=11;
+    int b;       // therefor   padding=11;
     int c;
     bool value;
 };
