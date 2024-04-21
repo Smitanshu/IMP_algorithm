@@ -19,9 +19,9 @@ public:
     // this->name=_name;
     // this->roll=_roll;
     // this->marks=_marks;
-    s
-        // or
-        name = _name;
+
+    // or
+    name = _name;
     roll = _roll;
     marks = _marks;
     cout << "Parameterized CTOR Called " << endl;
