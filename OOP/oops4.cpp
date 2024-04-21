@@ -9,7 +9,7 @@ public:
   string name;
   int roll;
   int marks;
-  Student() // Default CTOR:
+  Student() // Default  CTOR:
   {
     cout << "Default ctor called" << endl;
   }
