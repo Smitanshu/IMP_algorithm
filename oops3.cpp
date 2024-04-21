@@ -11,27 +11,27 @@ class abc
 
 public:
     abc()
-    { // constructor having function name as class name
+    { //    constructor     having function name as class name
         x = 0;
         y = new int(0);
     }
 
-    //old practic of ctor:
-    // abc(int _x, int _y, int _z = 0)
-    // {
-    //     this->x = _x;
-    //     this->y = new int(_y);
-    //     this->z = _z;
-    //     // or
+    //      old practic of ctor:
+    //  abc(int _x, int _y, int _z = 0)
+    //  {
+    //      this->x = _x;
+    //      this->y = new int(_y);
+    //      this->z = _z;
+    //      // or
 
     //     // x=_x;
     //     // *y=_y;
     //     // z=_z;
     // }
-    
-    //initialization list:
-    abc(int _x, int _y, int _z = 0):x(_x), y(new int(_y)), z(_z){}
-    
+
+    // initialization list:
+    abc(int _x, int _y, int _z = 0) : x(_x), y(new int(_y)), z(_z) {}
+
     // The function in which the member variable will never change usinf CONST.
     int getX() const
     {
