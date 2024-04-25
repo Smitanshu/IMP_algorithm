@@ -44,6 +44,45 @@ and only exposing what is  necessary.
 ->Code Reusable, increase code extensibility.
 
 
-->
+Note:Access modifier
+protected:Members which are in protected can accessible within its class and its derived class.
+->It can inherit.
+
+private:Members which are declared in private are accessible within class only.
+->It can'st Inherit.
+->privacy managed by the private access specify only.
+
+
+
+Types of Inheritance:
+1.Single Inheritance:{ Bird-->Sparrow   };
+->in this "Is a" relation present.
+
+2.Multilevel Inheritance /Multilevel Inheritance:{Fruit<---Mango<---Alphanzo}
+ {Person<---employee<---Manager}.
+
+3.Hierarchical Inheritance:
+->{
+     Animal-->>{Dog, Cat}
+                 |    |
+                 |    |
+                 |    |
+                 |    >>{Black, White, Desi, Jungle};
+                 >>{Desi, Labra, German, vodafone};
+
+}
+
+
+4.Multiple Inheritance:Derived class Inherits from more than one class.
+->Not possible in Java.
+  {                      |---->Researcher.
+    Teacher<----Professor|
+
+    }
+
+
+
+
+
 
 */
