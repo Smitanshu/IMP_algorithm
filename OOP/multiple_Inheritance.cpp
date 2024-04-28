@@ -104,4 +104,16 @@ int main()
 
 ->If One class is virtually created and second not  then also ambiguity occurs.
 
+
+Following are cases used to solve diamond problem in MULTIPLE INHERITANCE.
+Case 1:When virtual keyword is not used  for inheritance then it creates the
+:>R.walk() copy
+:>T.walk()
+.....And when we call the obj.walk() by creating object of professor class it does not knows whose class we have to call
+
+case 2:When Virtual keyword not used
+-->We can use ::(Scope Resolution operator)
+-->syntax:
+          obj_name.Class_name ::MethodName();
+
  */
