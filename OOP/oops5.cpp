@@ -82,10 +82,4 @@ Types of Inheritance:
 
 
 
-
-
-
-
-
-
 */
