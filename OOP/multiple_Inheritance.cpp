@@ -116,4 +116,10 @@ case 2:When Virtual keyword not used
 -->syntax:
           obj_name.Class_name ::MethodName();
 
+
+
+
+Note:We can access the method walk() in all the class
+This is the best example of the polymorphism.
+
  */
