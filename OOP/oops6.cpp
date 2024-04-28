@@ -41,7 +41,7 @@ int main()
     cout << c1.age << endl;
     cout << c1.eat << endl;
     cout << c1.color << endl;
-    cout << c1.legs;
+    cout << c1.legs << endl;
 
     return 0;
 }
